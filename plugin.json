@@ -1,0 +1,12 @@
+{
+	"id": "nodebb-plugin-sso-oauth-rehau",
+	"name": "NodeBB OAuth SSO for rehaupro.com",
+	"description": "NodeBB Plugin that allows users to login/register via the rehaupro.com saas api.",
+	"url": "https://gitlab.com/supcomhub/nodebb-plugin-sso-oauth-supcomhub",
+	"library": "./library.js",
+	"hooks": [
+		{ "hook": "static:user.delete", "method": "deleteUserData" },
+		{ "hook": "filter:user.whitelistFields", "method": "whitelistFields" },
+		{ "hook": "filter:auth.init", "method": "getStrategy" }
+	]
+}

@@ -1,0 +1,58 @@
+{
+  "name": "nodebb-plugin-sso-oauth-rehau",
+  "version": "0.3.6",
+  "description": "NodeBB OAuth SSO plugin for rehaupro.com",
+  "main": "library.js",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/daemondn/nodebb-plugin-sso-oauth-rehau"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "oauth",
+    "oauth2",
+    "sso",
+    "single sign on",
+    "login",
+    "registration"
+  ],
+  "author": {
+    "name": "Julian Lam",
+    "email": "julian@nodebb.org"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/daemondn/nodebb-plugin-sso-oauth-rehau/issues"
+  },
+  "readme": "",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "async": "^2.6.1",
+    "passport-oauth": "~1.0.0"
+  },
+  "nbbpm": {
+    "compatibility": "^1.11.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^7.3.2",
+    "@commitlint/config-angular": "^7.3.1",
+    "eslint": "^5.12.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
