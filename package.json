@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-sso-oauth-rehau",
-  "version": "0.3.6",
+  "version": "1.0.0",
   "description": "NodeBB OAuth SSO plugin for rehaupro.com",
   "main": "library.js",
   "repository": {
@@ -32,7 +32,7 @@
     "passport-oauth": "~1.0.0"
   },
   "nbbpm": {
-    "compatibility": "^1.11.1"
+    "compatibility": "^1.12.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.3.2",
