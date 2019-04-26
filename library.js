@@ -173,12 +173,15 @@
 		// Everything else is optional.
 
 		// Find out what is available by uncommenting this line:
-		// console.log(payload);
+		console.log(payload);
 
 		var profile = {};
-		profile.id = payload.data.attributes.userId;
-		profile.displayName = payload.data.attributes.displayName;
-        profile.email = payload.data.attributes.primaryEmailAddress;
+		profile.id = payload.id;
+		profile.displayName = payload.fullName;
+		profile.email = payload.email;
+		if (!profile.email) {
+			profile.email = profile.id + '@noreply.rehaupro.com';
+		}
 
 		// Do you want to automatically make somebody an admin? This line might help you do that...
 		// profile.isAdmin = payload.isAdmin ? true : false;
