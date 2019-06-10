@@ -46,6 +46,8 @@
 	 *   `OAUTH__ID=someoauthid OAUTH__SECRET=youroauthsecret node app.js`
 	 */
 
+	const paramPrefix = 'oauth';
+
 	const constants = Object.freeze({
 		type: 'oauth2',	// Either 'oauth' or 'oauth2'
 		name: 'rehau-oauth-sso',	// Something unique to your OAuth provider in lowercase, like "github", or "nodebb"
@@ -53,17 +55,17 @@
 			requestTokenURL: '',
 			accessTokenURL: '',
 			userAuthorizationURL: '',
-			consumerKey: nconf.get('oauth:key'),	// don't change this line
-			consumerSecret: nconf.get('oauth:secret'),	// don't change this line
+			consumerKey: nconf.get(paramPrefix + ':key'),	// don't change this line
+			consumerSecret: nconf.get(paramPrefix + ':secret'),	// don't change this line
 		},
 		oauth2: {
-            authorizationURL: nconf.get('oauth:authorizationURL'),
-            tokenURL: nconf.get('oauth:tokenURL'),
-            clientID: nconf.get('oauth:id'),	// don't change this line
-            clientSecret: nconf.get('oauth:secret'),	// don't change this line
-            scope: nconf.get('oauth:scope')
+            authorizationURL: nconf.get(paramPrefix + ':authorizationURL'),
+            tokenURL: nconf.get(paramPrefix + ':tokenURL'),
+            clientID: nconf.get(paramPrefix + ':id'),	// don't change this line
+            clientSecret: nconf.get(paramPrefix + ':secret'),	// don't change this line
+            scope: nconf.get(paramPrefix + ':scope')
 		},
-		userRoute: nconf.get('oauth:shApiProfileURL'),	// This is the address to your app's "user profile" API endpoint (expects JSON)
+		userRoute: nconf.get(paramPrefix + ':shApiProfileURL')	// This is the address to your app's "user profile" API endpoint (expects JSON)
 	});
 
 	const OAuth = {};
