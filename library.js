@@ -46,11 +46,11 @@
 	 *   `OAUTH__ID=someoauthid OAUTH__SECRET=youroauthsecret node app.js`
 	 */
 
-	const paramPrefix = 'oauth';
+	const paramPrefix = 'oauthmont';
 
 	const constants = Object.freeze({
 		type: 'oauth2',	// Either 'oauth' or 'oauth2'
-		name: 'rehau-oauth-sso',	// Something unique to your OAuth provider in lowercase, like "github", or "nodebb"
+		name: 'rehau-oauth-sso-mont',	// Something unique to your OAuth provider in lowercase, like "github", or "nodebb"
 		oauth: {
 			requestTokenURL: '',
 			accessTokenURL: '',
