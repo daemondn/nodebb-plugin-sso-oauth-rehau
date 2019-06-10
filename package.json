@@ -1,5 +1,5 @@
 {
-  "name": "nodebb-plugin-sso-oauth-rehau",
+  "name": "nodebb-plugin-sso-oauth-rehau-mont",
   "version": "1.0.0",
   "description": "NodeBB OAuth SSO plugin for rehaupro.com",
   "main": "library.js",
